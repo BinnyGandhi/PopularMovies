@@ -1,8 +1,18 @@
 .mdl-card__supporting-text {
-    height: 70px;
+    min-height: 70px;
 }
 
 h4 {
     font-weight: bold;
     margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.54);
+    font-weight: 200;
+}
+
+#changeCursor {
+    cursor: pointer;
 }

@@ -13,7 +13,7 @@ $(document).ready(function () {
         success: function (result, xhr, status) {
             movieDetails = result;
             var listContainer = $('#list-container');
-            var template = Handlebars.compile($('#movie-details-template').html());
+            var template = Handlebars.compile($('#popular-movies-details-template').html());
             listContainer.html(listContainer.html() + template(movieDetails));
         },
         error: function (error, xhr, status) {
@@ -21,3 +21,8 @@ $(document).ready(function () {
         }
     });
 });
+
+function showDetails(movieId) {
+    sessionStorage.setItem('movieId', movieId);
+    location.href = 'movieDetails.html';
+}

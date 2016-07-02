@@ -39,28 +39,23 @@
     </main>
 </div>
 
-<script id="movie-details-template" type="text/x-handlebars-template">
+<script id="popular-movies-details-template" type="text/x-handlebars-template">
 
     {{#results}}
-    <div class="mdl-cell mdl-cell--4-col">
-        <div class="demo-card-wide mdl-card mdl-shadow--2dp">
-
+    <div class="mdl-cell--2-offset-tablet"></div>
+    <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet">
+        <div class="demo-card-wide mdl-card mdl-shadow--3dp mdl-cell--1-offset-desktop" id="changeCursor"
+             onclick="showDetails({{id}})">
             <div class="mdl-card__title">
-                <h2 class="mdl-card__title-text">
-                    <img src="https://image.tmdb.org/t/p/w300{{backdrop_path}}" alt="">
-                </h2>
+                <img src="https://image.tmdb.org/t/p/w300{{backdrop_path}}" alt="">
             </div>
             <div class="mdl-card__supporting-text">
                 <!--Movie name-->
                 <h4>{{title}}</h4>
             </div>
             <div class="mdl-card__actions mdl-card--border">
-                <div class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-                    <!--Popularity-->
-                    {{popularity}}
-                </div>
+                <h6 style="margin:5px">{{release_date}}</h6>
             </div>
-
         </div>
     </div>
     {{/results}}
